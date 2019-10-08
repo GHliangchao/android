@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="js/letpro/conf.js" ></script>
+		<script type="text/javascript" src="js/letpro/md5.js" ></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<header class="title_all">
+			<div class="title_left" ><img src=" images/icon_select.png" /></div>
+			<!--
+			<div class="title_left" ><a href="#topPopover1"><img src=" images/icon_select.png" /></a></div>
+			-->
+			<div class="title_center" id="titleCenter">甄码锁列表</div>
+			<div class="title_right" ><img src=" images/icon_sorts.png" /></div>
+			<!--
+			<div class="title_right" ><a href="#topPopover"><img src=" images/icon_sorts.png" /></a></div>
+			-->
+		</header>
+		<!--
+		<div id="topPopover1" class="mui-popover popover">
+			<div class="popover_in" onclick="stateClick('全部车锁')">全部车锁</div>
+			<div class="popover_in" onclick="stateClick('未检验')">未检验</div>
+			<div class="popover_in" onclick="stateClick('发现问题')">发现问题</div>
+			<div class="popover_in" onclick="stateClick('通过检测')" style="background:none;">通过检测</div>
+		</div>
+		
+		<div id="topPopover" class="mui-popover popover">
+			<div class="popover_in" onclick="stateClick('全部车锁')">地锁列表</div>
+			<div class="popover_in" onclick="clickHelp()">使用帮助</div>
+			<div class="popover_in" onclick="exit()" style="background: none;">退出登录</div>
+		 </div>
+		 -->
+		 
+		<div class="three"></div>
+		<div class="nolock" id="three">
+			:&nbsp;(&nbsp;没有甄码锁！要不<a href="#" onclick="scanClick()">扫描一下</a>？
+		</div>
+
+		<!-- 扫描
+		<div class="lock_black">
+			车锁扫描中...
+		</div>
+		-->
+		
+		<div class="lock_list" id="lockList">
+			<!--
+			<div class="lock_list_in"  onclick="mui.openWindow({url:'test_list.html',extras: {'lockId':111}})">
+				编号：123123123123<br /> MAC：12341234123123
+				<br /> 蓝牙：123123123123
+				<br /> 状态：<strong>未检验</strong>
+			</div>
+			-->
+		</div>
+
+		<div class="four"></div>
+
+		<!-- bottom-->
+		<div class="bottom" onclick="scanClick()">
+			<div class="bottom_onebtn orange" id="bottom">
+				扫描甄码锁
+			</div>
+		</div>
+	</body>
+	<script src="js/letpro/exit-handler.js" ></script>
+	<script src="js/letpro/plugin/blelock.js" ></script>
+	<script src="js/letpro/lock_list.js" ></script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/mui.picker.min.css" rel="stylesheet"/>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+		<script src="js/zengma/i18n.js"></script>
+		<script src="js/zengma/conf.js"></script>
+		<script src="js/zengma/access.js" ></script>
+		<script src="js/zengma/common.js" ></script>
+		<script src="js/zengma/comm-dialog.js" ></script>
+		<script src="js/zengma/plugin/blelock.js" ></script>
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png"/></div>
+			<div class="center" id="zmdetailText"></div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<!-- 上拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper" style="top:3rem; background: none;">
+			<div id="nullmessage" style="display:none;" class="botton_big"></div>
+			<div id="message" style="display:none;">
+			<div class="zcode_in" id="zcodeIn" style="display:none;">
+				<div class="left" id="zcodeText"></div>
+				<div class="right">
+					<span id="zmCode1" style="display:none;"></span>
+					<span id="zmCode2" style="display:none;">******</span>&nbsp;&nbsp;
+					<a href="javascript:void(0);" onclick="showBtn(this)" id="a"></a>
+				</div>	
+				<div id="caInfo">
+				    <div class="left" id="effectDateText"></div>
+                    <div class="right" id="effectDate"></div>   
+                    
+				    <div class="left" id="cnText"></div>
+                    <div class="right" id="cn"></div>   
+                    
+                    <div class="left" style="width:auto;" id="buznoText"></div>
+                    <div class="right" style="width:auto;" id="buzno"></div>
+                    <div class="clear"></div>
+                    
+					<div class="left" id="caIdText"></div>
+					<div class="right" id="caId"></div>	
+					
+					<div class="left" id="calidityDateText"></div>
+                    <div class="right" id="validityDate"></div> 
+					
+					<div class="left" id="certAuthorityText"></div>
+					<div class="right" id="certAuthority"></div>	
+					
+					<div class="left" id="caStatusText"></div>
+					<div class="right"><span id="status"></span><a href="javascript:void(0);" id="renewText"></a> </div>	
+					
+					<div class="left" id="fingerprintText"></div>
+					<div class="right" id="fingerprint"></div>	
+					
+					<div class="left" id="qrcodeText"></div>
+					<div class="right"><img src="images/ewm.jpg" id="qrcode"></div>	
+					
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="zcode_tab">
+				<input type="text" id="name" />
+				<input type="text" id="startTime" data-options='{"type":"date"}' class="btnTime mui-btn mui-btn-block"/>
+				<input type="text" id="endTime" data-options='{"type":"date"}' class="btnTime mui-btn mui-btn-block"/>
+				<div class="btn" onclick="findBtn();" id="searchText"></div>
+				<div class="btn" onclick="findEvidenceBtn();" id="searchText1"></div>
+			</div>
+			<div id="content">
+				
+			</div>
+		</div>
+		
+		</div>
+		<div class="four"></div>
+		<div class="bottom" id="create" onclick="createZcode();" style="display:none;"> 
+            <div class="bottom_1">创&nbsp;&nbsp;建&nbsp;&nbsp;证&nbsp;&nbsp;据&nbsp;&nbsp;链</div>
+        </div>
+        
+        <!-- 非第三方应用显示模块选择栏 @since liujun 2018.09.26 -->
+        <div class="bottom" id="moduleBar" style="display:none;">
+            <div class="bottom_nav_3">
+                <div class="btn" id="gotoindex"><img src="images/index1.png"/><br />首页</div>
+                <div class="btn" id="gotolock"><img src="images/index4.png"/><br />甄码锁 </div>
+                <div class="btn" id="gotoSecurity"><img src="images/index5.png"/><br />防伪</div>
+                <div class="btn" id="gotohelp"><img src="images/index3.png"/><br />帮助中心</div>
+                <div class="btn" id="gotocenter"><img src="images/index2.png"/><br />个人中心</div>
+            </div>
+        </div>
+	</body>
+	<script src="js/mui.picker.min.js"></script>
+	<script src="js/zengma/plugin/mgca.js"></script>
+	<script src="js/zengma/zmdetail.js"></script>
+	<script src="js/zengma/common.js" ></script>
+</html>

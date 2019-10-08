@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script src="js/letpro/conf.js"></script>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script>
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<header class="title_all">
+			<div class="title_left" onclick="backPage();"><img src="images/icon_back.png" /></div>
+			<div class="title_center">甄码锁测试</div>
+			<div class="title_right">
+				<a href="#topPopover"><img src="images/icon_sorts.png" /></a>
+			</div>
+		</header>
+		<div id="topPopover" class="mui-popover popover">
+			<div class="popover_in" onclick="lockList()" style="background: none;">锁列表</div>
+		</div>
+		<div class="three"></div>
+
+		<div class="lock_info" id="lock_info">
+			<strong>基本信息</strong>
+			<br /> 甄码编码：<span id="zcode"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+			<br /> MAC地址：<span id="address"></span>
+			<br /> 蓝牙名称：<span id="btname"></span>
+			<br /> 版本信息：<span id="version"></span>
+			<br /> 锁的状态：<span id="status"></span>
+			<br />
+		</div>
+
+		<div class="index_content_line">
+			<div class="pic"><img src="images/index_1.png" /></div>
+			<div class="txt">
+				<span>连接甄码锁</span><strong id="btc_status"></strong>
+				<br />蓝牙连接的信号是否正常、稳定。
+			</div>
+			<div class="btn" id="btn_btc" onclick="btConnect()">连接</div>
+		</div>
+		
+		<div class="index_content_line">
+			<div class="pic"><img src="images/index_6.png" /></div>
+			<div class="txt">
+				<span>进行握手</span><strong id="hands_status"></strong>
+				<br />握手是否正常，获取状态等信息。
+			</div>
+			<div class="btn" onclick="handshake(this)">握手</div>
+		</div>
+		
+		<div class="index_content_line">
+			<div class="pic"><img src="images/index_7.png" /></div>
+			<div class="txt">
+				<span>读取甄码</span><strong id="rzcode_status"></strong>
+				<br />读出锁内当前甄码信息。
+			</div>
+			<div class="btn" onclick="readZcode(this)">读码</div>
+		</div>
+		
+		<div class="index_content_line">
+			<div class="pic"><img src="images/index_2.png" /></div>
+			<div class="txt">
+				<span>开锁关锁</span><strong id="lock_status"></strong>
+				<br />测试锁在开关时是否会出现问题。
+			</div>
+			<div class="btn" id="bt_close" onclick="closeLock(this)">关锁</div>
+			<div class="btn" id="bt_open" onclick="openLock(this)">开锁</div>
+		</div>
+		
+		<div class="index_content_line">
+			<div class="pic"><img src="images/index_3.png" /></div>
+			<div class="txt">
+				<span>写入甄码</span><strong id="wzcode_status"></strong>
+				<br />往锁里写入新码，覆盖旧码。
+			</div>
+			<div class="btn" id="bt_wzcode" onclick="wzcode(this)">写码</div>
+		</div>
+		
+		<div class="index_content_line">
+			<div class="pic"><img src="images/firstauto.png" /></div>
+			<div class="txt">
+				<span>重置锁</span><strong id="reset_status"></strong>
+				<br />清空甄码信息，锁变成可重用。
+			</div>
+			<div class="btn" id="btn_reset" onclick="resetLock(this)">重置</div>
+		</div>
+		
+		<div class="index_content_line">
+            <div class="pic"><img src="images/laba.png" /></div>
+            <div class="txt">
+                <span>上报位置</span><strong id="locate_status"></strong>
+				<br />上报当前位置信息。
+            </div>
+            <div class="btn" id="btn_locate" onclick="locate(this)">上报</div>
+        </div>
+		
+		<div class="index_content_line">
+			<div class="pic"><img src="images/swtup.png" /></div>
+			<div class="txt">
+				<span>升级切换</span><strong id="swtUpgrade_status"></strong>
+				<br />切换到升级模式。
+			</div>
+			<div class="btn" onclick="switchUpgrade(this)">切换</div>
+		</div>
+		
+		<div class="index_content_line">
+			<div class="pic"><img src="images/lock_mode.png" /></div>
+			<div class="txt">
+				<span>修改密钥</span><strong id="mkey_status"></strong>
+				<br />修改锁的密钥，慎用。
+			</div>
+			<div class="btn" onclick="modifyKey(this)">修改</div>
+		</div>
+		
+		<div class="index_content_line">
+			<div class="pic"><img src="images/nfc.png" /></div>
+			<div class="txt">
+				<span>NFC标签</span><strong id="nfc_status"></strong>
+				<br />测试读写NFC标签内容。
+			</div>
+			<div class="btn" id="nfc_write" onclick="nfcWrite(this)">写</div>
+			<div class="btn" id="nfc_read" onclick="nfcRead(this)">读</div>
+		</div>
+		
+		<div class="four"></div>
+		<div class="lock_black" id="testShow" style="display: none;">
+			甄码锁扫描中...
+		</div>
+
+		<!-- bottom -->
+		<div class="bottom_btn_2"></div>
+		
+		<script src="js/letpro/exit-handler.js" ></script>
+		<script src="js/letpro/plugin/blelock.js" ></script>
+		<script src="js/letpro/test_base.js" ></script>
+		<script src="js/letpro/test_ram.js" ></script>
+		<script src="js/letpro/test_stability.js" ></script>
+		<script src="js/letpro/switch_upgrade.js" ></script>
+		<script src="js/letpro/test_list.js" ></script>
+		<script src="js/letpro/lock_mode.js" ></script>
+		<script src="js/letpro/lock_beep.js" ></script>
+	</body>
+</html>

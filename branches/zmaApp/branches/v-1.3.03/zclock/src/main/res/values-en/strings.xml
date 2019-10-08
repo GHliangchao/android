@@ -1,0 +1,10 @@
+<resources>
+	
+    <string name="nfc_read">Read NFC tag</string>
+    <string name="nfc_write">Write NFC tag</string>
+    <string name="nfc_ophint">Please close to the lock NFC tag</string>
+	<string name="nfc_rdhint">Read the following data from NFC tag</string>
+	<string name="nfc_wthint">Write the following data to NFC tag</string>
+    <string name="nfc_qrophint">Please put the NFC tag on the back of the mobile phone near the merchandise.</string>
+    <string name="nfc_qrophint_read">Scanned content has been read</string>
+</resources>

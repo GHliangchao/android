@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+		<script src="js/zengma/conf.js"></script>
+		<script>
+			mui.init({
+			    // @since liujun 2018-02-06
+			    // 注册之后，在信息完善页面,点击返回直接返回到首页，不需要再返回到注册页面
+			    beforeback: function(){
+			        var dpage = plus.webview.getWebviewById("index.html");
+			        if(dpage==null){
+			            mui.openWindow({url: "index.html"});
+			        }else{
+			            mui.fire(dpage, "ppreload");
+			        }
+			        return false;
+			    }
+			});
+			mui.plusReady(function(){
+				zengma_conf.uiInit();
+			});
+		</script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png"/></div>
+			<div class="center" id="registerText"></div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		  <div class="register_last">
+		  	<div class="pic">
+		  		<img src="images/in1.png"/><br /><span id="submitText"></span>
+		  	</div>
+		  	   <img src="images/in5.png" style="float: left;"/>
+		  	<div class="pic">
+		  		<img src="images/in2.png"/><br /><span id="checkText"></span>
+		  	</div>
+		  	   <img src="images/in6.png" style="float: left;"/>
+		  	<div class="pic gray">
+		  		<img src="images/in4.png"/><br /><span id="resultText"></span>
+		  	</div>
+		  </div>
+		  <div class="register_last_txt" id="registerLastText">
+		  	<!-- 资料已提交成功！<br />
+		  	我们将会在7个工作日内<br />
+		  	完成审核工作，请耐心等待！ -->
+		  </div>
+		
+		<div class="bottom" onclick="document.location='index.html'">
+			<div class="bottom_1" id="nextText"></div>
+		</div>
+	</body>
+    <script>
+		//i18n国际化资源 @since liujun 2018-02-24
+		//------------------start--------------------
+	    i18n.readyI18n(function(){
+	    	$("#registerText").html($.i18n.prop("register_titleText"));
+	    	$("#submitText").html($.i18n.prop("register_last_submitText"));
+	    	$("#checkText").html($.i18n.prop("register_last_checkText"));
+	    	$("#resultText").html($.i18n.prop("register_last_resultText"));
+	    	$("#registerLastText").html($.i18n.prop("register_last_text"));
+	    	$("#nextText").html($.i18n.prop("register_last_next"));
+	    });
+	    //------------------end--------------------
+    </script>
+</html>

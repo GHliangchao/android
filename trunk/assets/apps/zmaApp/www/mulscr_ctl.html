@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+		<script src="js/zengma/conf.js"></script>
+		<script>
+			mui.plusReady(function(){
+				zengma_conf.uiInit();
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png"/></div>
+			<div class="center" id="mulscrctlText"></div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		<div class="jianshe">
+			<img src="images/pic3.jpg"/><br />
+			<span id="buildText"></span>
+		</div>
+		
+		
+	</body>
+	<script>
+	   i18n.readyI18n(function(){
+		   $("#mulscrctlText").html($.i18n.prop("mulscrctl_titleText"));
+		   $("#buildText").html($.i18n.prop("mulscrctl_buildText"));
+	   });
+	</script>
+
+</html>

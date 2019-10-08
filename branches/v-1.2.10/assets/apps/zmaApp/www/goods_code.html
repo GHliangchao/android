@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title></title>
+        <script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" id="back"><img src="images/top-left.png"/></div>
+			<div class="center" id="goodsCodeText"></div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div class="saoma_list" id="goodsCode">
+			<img src="images/s1.jpg">
+			<strong id="gcQRcodeText"></strong><br />
+			<span id="gcQRInfoText"></span>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="saoma_list" id="goodsNFC">
+			<img src="images/s3.jpg">
+			<strong id="gcNFCText"></strong><br />
+			<span id="gcNFCInfoText"></span>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="four"></div>
+		<div class="bottom">
+            <div class="bottom_nav_3">
+                <div class="btn" id="gotoindex"><img src="images/index1.png"/><br />首页</div>
+                <div class="btn" id="gotolock"><img src="images/index4.png"/><br />甄码锁 </div>
+                <div class="btn" id="gotoSecurity"><img src="images/index5.png"/><br />防伪</div>
+                <div class="btn" id="gotohelp"><img src="images/index3.png"/><br />帮助中心</div>
+                <div class="btn" id="gotocenter"><img src="images/index2.png"/><br />个人中心</div>
+            </div>
+        </div>
+        
+		<script src="js/zengma/plugin/blelock.js"></script>
+		<script src="js/zengma/goods_code.js"></script>
+		<script src="js/zengma/common.js"></script>
+	</body>
+</html>

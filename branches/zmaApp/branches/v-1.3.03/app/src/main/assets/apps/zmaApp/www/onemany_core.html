@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<script type="text/javascript">
+			var html = document.getElementsByTagName('html')[0],
+				width = document.documentElement.clientWidth;
+			html.style.fontSize = width / 25 + 'px';
+		</script>
+		<script type="text/javascript">
+			function setStatusbarRed() {
+				// 设置系统状态栏背景色为红色
+				plus.navigator.setStatusBarBackground("#000000");
+				plus.navigator.setStatusBarStyle("UIStatusBarStyleBlackOpaque");
+
+			}
+			mui.plusReady(function() {
+				setStatusbarRed();
+			});
+		</script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="javascript:history.back(-1);"><img src="images/top-left.png"/></div>
+			<div class="center">一芯多卡</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div class="saoma_list" onclick="document.location='ca.html'">
+			<img src="images/c1.jpg">
+			<strong>CA卡管理</strong><br />
+			管理CA卡的信息以及确认设备从指定CA卡读取信息
+			<div class="clear"></div>
+		</div>
+		
+		<div class="saoma_list" onclick="document.location='bank_card.html'">
+			<img src="images/c2.jpg">
+			<strong>银行卡管理</strong><br />
+			管理银行卡信息，以及确认设备从指定银行卡读取信息
+			<div class="clear"></div>
+		</div>
+		
+		<div class="saoma_list" onclick="document.location='app_card.html'">
+			<img src="images/c3.jpg">
+			<strong>应用卡管理</strong><br />
+			应用卡的集合管理
+			<div class="clear"></div>
+		</div>
+		
+		
+		<div class="four"></div>
+		
+		
+		
+		
+		
+	</body>
+
+</html>

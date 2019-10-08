@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back()"><img src="images/top-left.png"/></div>
+			<div class="center">跨境关务服务</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		<div class="gw" id="content">
+			<div class="gw_logo">
+				<img src="images/logo_big.png"/>
+				<a @click="opTeggsIndex()">进入TEGGS首页</a>
+			</div>
+			<div class="gw_content" >
+				<div class="title">跨境一站式服务询价</div>
+				<div class="line">
+					<span>出发地</span>
+					<select v-model="fromCountry">
+						<option value="">请选择国家</option>
+						<template v-for="item in countries">
+							<option :value="item.name">{{item.name}}</option>
+						</template>
+					</select>
+					<input type="text" placeholder="请输入港口/机场" v-model="fromPort"/>
+				</div>
+				
+				<div class="line">
+					<span>目的地</span>
+					<select v-model="toCountry">
+						<option value="">请选择国家</option>
+						<template v-for="item in countries">
+							<option :value="item.name">{{item.name}}</option>
+						</template>
+					</select>
+					<input type="text" placeholder="请输入港口/机场" v-model="toPort"/>
+				</div>
+				
+				<div class="line">
+					<font>毛重</font>
+					<input type="number" placeholder="请输入毛重" v-model="weight"/>
+					<font>体积</font>
+					<input type="number" placeholder="请输入体积" v-model="vol"/>
+				</div>
+				<div class="title1">用户请输入联系方式</div>
+				
+				<div class="line">
+					<font>姓名</font>
+					<input type="text" placeholder="请输入姓名" v-model="name"/>
+					<font>电话</font>
+					<input type="number" placeholder="请输入电话" v-model="phone"/>
+				</div>
+				<button @click="submitInfo()">提交</button>
+			</div>
+		</div>
+		
+	</body>
+	<script src="js/zengma/cross_border.js"></script>
+</html>

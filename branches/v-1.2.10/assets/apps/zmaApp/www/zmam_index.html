@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<script type="text/javascript">
+			var html = document.getElementsByTagName('html')[0],
+				width = document.documentElement.clientWidth;
+			html.style.fontSize = width / 25 + 'px';
+		</script>
+		<script type="text/javascript">
+			function setStatusbarRed() {
+				// 设置系统状态栏背景色为红色
+				plus.navigator.setStatusBarBackground("#000000");
+				plus.navigator.setStatusBarStyle("UIStatusBarStyleBlackOpaque");
+
+			}
+			mui.plusReady(function() {
+				setStatusbarRed();
+			});
+		</script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="javascript:history.back(-1);"><img src="images/top-left.png"/></div>
+			<div class="center">甄码管理</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div class="zcode_list" onclick="document.location='zmam_list.html'">
+			<img src="images/pic1.jpg"><br />
+			<span>推点平台&nbsp;TUIDIAN PLATFORM</span><br />
+			
+		</div>
+		
+		<div class="zcode_list">
+			<img src="images/pic2.jpg"><br />
+			<span>网达平台&nbsp;WANGDA PLATFORM</span><br />
+			
+		</div>
+		
+		
+		
+		
+	</body>
+
+</html>

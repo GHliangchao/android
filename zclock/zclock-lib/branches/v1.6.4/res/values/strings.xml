@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="nfc_read">读NFC标签</string>
+    <string name="nfc_write">写NFC标签</string>
+    <string name="nfc_ophint">请将手机背面靠近甄码锁NFC标签</string>
+	<string name="nfc_rdhint">从NFC标签读到如下数据</string>
+	<string name="nfc_wthint">将写入以下数据到NFC标签</string>
+	<string name="nfc_qrophint">请将手机背面靠近商品的NFC标签</string>
+	<string name="nfc_qrophint_read">扫描内容已读取</string>
+	
+</resources>

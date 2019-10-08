@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title></title>
+        <script src="js/mui.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js" ></script>
+        <script src="js/transform.js"></script>
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png" /></div>
+			<div class="center">甄码锁</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+
+		<div class="lock_detail">
+			<div class="txt_left">甄码编码：</div>
+			<div class="txt_right" id="code"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="lock_detail">
+			<div class="txt_left">MAC地址：</div>
+			<div class="txt_right" id="address"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="lock_detail">
+			<div class="txt_left">锁名称：</div>
+			<div class="txt_right" id="name"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="lock_detail">
+			<div class="txt_left">版本信息：</div>
+			<div class="txt_right" id="version"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="lock_detail">
+			<div class="txt_left">锁状态：</div>
+			<div class="txt_right" id="state"></div>
+			<div class="clear"></div>
+		</div>
+		<div class="lock_detail" style="display:none;" id="nfc">
+			<div class="txt_left">NFC：</div>
+			<div class="txt_right">
+				<a href="javascript:void(0);" id="readNFC">读取</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" id="writeNFC">写入</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		
+		<div class="lock_btn" id="read" style="display: none;">读取甄码</div>
+		<div class="lock_btn" id="close" style="display: none;">关闭甄码锁</div>
+		<div class="lock_btn" id="upload" style="display: none;">上报位置</div>
+		<div class="lock_btn" id="write" style="display: none;">写入甄码</div>
+		<div class="lock_btn" id="open" style="display: none;">打开甄码锁</div>
+		<div class="lock_btn" id="reset" style="display: none;">重置甄码锁</div>
+		<div class="lock_btn" id="modify" style="display: none;">修改密钥</div>
+		<div class="lock_btn" id="upgrade" style="display: none;">升级切换</div>
+        
+        <div class="four"></div>
+        <div class="bottom">
+            <div class="bottom_nav_3">
+                <div class="btn" id="gotoindex"><img src="images/index1.png"/><br />首页</div>
+                <div class="btn" id="gotolock"><img src="images/index4.png"/><br />甄码锁 </div>
+                <div class="btn" id="gotoSecurity"><img src="images/index5.png"/><br />防伪</div>
+                <div class="btn" id="gotohelp"><img src="images/index3.png"/><br />帮助中心</div>
+                <div class="btn" id="gotocenter"><img src="images/index2.png"/><br />个人中心</div>
+            </div>
+        </div>
+        
+	</body>
+	<script src="js/zengma/common.js" ></script>
+	<script src="js/zengma/plugin/mgca.js"></script>
+	<script src="js/zengma/plugin/blelock.js"></script>
+	<script src="js/zengma/lock_detail.js" ></script>
+</html>

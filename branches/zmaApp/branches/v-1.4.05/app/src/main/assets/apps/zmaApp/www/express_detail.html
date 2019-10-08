@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png"/></div>
+			<div class="center">快递详情</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		<div class="kuaidi" id="content">
+			<div class="content">
+				运单号：{{ ship.shipNumber }} <span>{{ ship.statusText }}</span><br/>
+				承运人：{{ ship.expressCompany }}&nbsp;&nbsp;&nbsp;联系方式：<a @click="telPhone(ship.expressPhone)">{{ ship.expressPhone }}</a><br/>
+				始发地：{{ ship.senderCity }}&nbsp;&nbsp;&nbsp;到达地：{{ ship.receiveerCity }}<br />
+				发件人：{{ ship.senderContactName }}&nbsp;&nbsp;&nbsp;收件人：{{ ship.receiveerContactName }}
+			</div>
+			<div v-for="(log,index) in logs" :class="['list',{now:index==0},{first:index==(logs.length-1)}]">
+				<div class="left">{{ log.stage }}</div>
+				<div class="right">
+					<span>{{ log.ctime }}</span> {{ log.detail }}
+					<div class="tips"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="four"></div>
+		
+	</body>
+	<script src="js/zengma/express_detail.js"></script>
+</html>

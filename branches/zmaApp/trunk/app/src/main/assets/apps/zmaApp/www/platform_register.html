@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script type="text/javascript">
+			var html = document.getElementsByTagName('html')[0],
+				width = document.documentElement.clientWidth;
+			html.style.fontSize = width / 25 + 'px';
+		</script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="javascript:history.back(-1);"><img src="images/top-left.png"/></div>
+			<div class="center">平台注册</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div class="register_list">
+			<div class="left">企业名称</div>
+			<div class="right"><input type="text" placeholder="请输入企业名称"/> </div>
+			<div class="clear"></div>
+			
+			<!--<div class="right">
+				<select>
+				    <option style="display: none;">请选择平台</option>
+				   <option>推点平台</option>
+				   <option>网达网平台</option>
+				</select>
+			</div>-->
+			<div class="left">营业执照</div>
+			<div class="right"><input type="text" placeholder="请输入营业执照号码"/> </div>
+			<div class="clear"></div>
+			
+			<div class="left">执照照片</div>
+			<div class="right_pic"><img  src="images/upload.png"/></div>
+			<div class="clear"></div>
+			
+			<div class="left">法人姓名</div>
+			<div class="right"><input type="text" placeholder="请输入法人姓名"/> </div>
+			<div class="clear"></div>
+			
+			<div class="left">身份证号</div>
+			<div class="right"><input type="text" placeholder="请输入身份证号码"/> </div>
+			<div class="clear"></div>
+			
+			<div class="left">手机号码</div>
+			<div class="right"><input type="text" placeholder="请输入手机号码"/> </div>
+			<div class="clear"></div>
+			
+			<div class="left">联系地址</div>
+			<div class="right_2">
+				<select>
+				    <option style="display: none;">请选择国家</option>
+				   <option>中华人民共和国</option>
+				   <option>其他国家</option>
+				</select>
+			</div>
+			<div class="right_2">
+				<select>
+				    <option style="display: none;">选择身份</option>
+				   <option>浙江省</option>
+				   <option>江苏省</option>
+				</select>
+			</div>
+			<div class="clear"></div>
+			
+			<div class="left"></div>
+			<div class="right_2">
+				<select>
+				    <option style="display: none;">请选择市</option>
+				   <option>杭州市</option>
+				   <option>温州市</option>
+				</select>
+			</div>
+			<div class="right_2">
+				<select>
+				    <option style="display: none;">请选择区县</option>
+				   <option>西湖区</option>
+				   <option>余杭区</option>
+				</select>
+			</div>
+			<div class="clear"></div>
+			
+			<div class="left"></div>
+			<div class="right">
+				<input type="text" placeholder="请输入详细地址"/> 
+			</div>
+			<div class="clear"></div>
+			
+			
+			
+		</div>
+		<div class="hello"></div>
+		
+		
+		
+		<div class="bottom" onclick="document.location='register_last.html'">
+			<div class="bottom_1">申&nbsp;&nbsp;请</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NFC工具</string>
+    <string name="nfc_write">写NFC码</string>
+</resources>

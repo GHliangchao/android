@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+
+	</head>
+
+	<body>
+		<div class="apptop" id="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png" /></div>
+			<div class="center" v-if="opType=='M'">地址管理</div>
+			<div class="center" v-else>选择地址</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div id="content">
+			<div class="address_list"  v-for="(item, idx) in addressList" @click="selectAddress(item.id, idx);">
+				<div class="icon"></div>
+				<div class="txt">
+					<font v-show="item.defaultAddress">默认地址&nbsp;|&nbsp;</font><b>{{item.contactName}}</b>&nbsp;&nbsp;{{item.contactPhone}}<br />
+					{{item.addressInfo}}
+				</div>
+				<div class="go" @click.stop="editAddress(item.id)">编辑</div>
+				<div class="clear"></div>
+			</div>
+			<div class="meiyou" v-if="addressList.length == 0">
+				<img src="images/none.svg"/>
+				你还没有添加过地址
+			</div>
+			<div class="four"></div>
+
+			<div class="bottom" @click="addAddress()">
+				<div class="bottom_1">新建地址</div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="js/zengma/address_list.js"></script>
+</html>

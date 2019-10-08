@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title></title>
+        <script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/exif.js"></script>
+        <script src="js/zengma/handleimg.js"></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+        <style type="text/css">
+			*{
+			    -webkit-user-select: none;
+			}
+			
+			html,body{
+			    height: 100%;
+			    background:#000;
+			}
+	    </style>
+    </head>
+    <body >
+        <div id="bcid" class="barcode"></div>
+        
+        <div class="saomiao" id="handin">
+	        <div class="btn_big" onclick="muiback();" id="cancelText"></div>
+	        <div class="btn_big" onclick='setFlash()' id="flash"></div>
+        </div>
+    </body>
+    <script src="js/zengma/plugin/mgca.js"></script>
+    <script src="js/zengma/goods_code_scan.js" ></script>
+</html>

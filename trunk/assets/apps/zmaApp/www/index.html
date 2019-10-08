@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script src="js/sec/md5.min.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+		<script src="js/zengma/conf.js"></script>
+		<script src="js/zengma/access.js" ></script>
+		<script src="js/zengma/common.js" ></script>
+		<script src="js/zengma/comm-dialog.js" ></script>
+		<script src="js/zengma/index.js"></script>
+		<script src="js/zengma/exit-handler.js"></script>
+		
+	</head>
+
+	<body style="background: none; height: 100%;">
+		<!--index top-->
+		<div class="header"></div>
+		<div class="radar"></div>
+		<div class="index_bg"></div>
+		<div class="index_logo">
+		<img src="images/logo.png"/><br /><b>M+G平台入口</b><br /><span>M+G platform entrance
+</span>
+		
+		</div>
+		<div class="index_nav1" id="calist" onclick="judgeLogin(function(){mui.openWindow({url:'calist.html'});})">
+			<b>CA管理</b><br /><span>CA management</span>
+		</div>
+		<div class="index_nav2" onclick="judgeLogin(function(){mui.openWindow({url:'zmlist.html'});})">
+			<b>甄码管理</b><br /><span>MCL code management </span>
+		</div>
+		<div class="index_nav3" onclick="judgeLogin(function(){mui.openWindow({url:'mulscr_ctl.html'});})">
+			<b>北斗多模</b><br /><span>beidou multimode</span>
+		</div>
+		<div class="index_nav4" onclick="judgeLogin(function(){mui.openWindow({url:'scan_auth.html'});})">
+			<b>扫码认证</b><br /><span>sweep code certification</span>
+		</div>
+		<div class="index_nav5" onclick="judgeLogin(function(){mui.openWindow({url:'mulscr_ctl.html'});})">
+			<b>多屏互动</b><br /><span>screen more interactive</span>
+		</div>
+		<div class="index_nav6" onclick="judgeLogin(function(){mui.openWindow({url:'cartlist.html'});})">
+			<b>一芯多卡</b><br /><span>more than a core card</span>
+		</div>
+		
+		<div class="bottom">
+			<div class="bottom_nav_3">
+				<div class="btn choosed"><img src="images/index1_b.png" onclick="judgeLogin(function(){gotoindex();})"/><br />首页</div>
+				<div class="btn"><img src="images/index2.png" onclick="judgeLogin(function(){gotocenter();})"/><br />个人中心</div>
+				<div class="btn"><img src="images/index4.png" onclick="judgeLogin(function(){gotolock();})"/><br />甄码锁 </div>
+				<div class="btn"><img src="images/index3.png" onclick="judgeLogin(function(){gotohelp();})"/><br />帮助中心</div>
+			    <div class="btn"><img src="images/index5.png" onclick="judgeLogin(function(){gotoSecurity();})"/><br />防伪</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

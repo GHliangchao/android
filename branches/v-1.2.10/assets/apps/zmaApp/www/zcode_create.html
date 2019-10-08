@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title></title>
+        <script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <link href="css/mui.picker.min.css" rel="stylesheet"/>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/common.js" ></script>
+        <script src="js/zengma/comm-dialog.js" ></script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png"/></div>
+			<div class="center">甄码生成</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		<div class="shengcheng">
+			<div class="left">业务标题：</div>
+			<div class="right"><input type="text" id="title" maxlength="80"/></div>
+			<div class="left">业务概要：</div>
+            <div class="right"><input type="text" id="content" maxlength="250"/></div>
+            <div class="left">当前地址：</div>
+            <div class="right"><input type="text" id="address" maxlength="50"/></div>
+			<div class="left">备注：</div>
+			<div class="right"><textarea id="remark" maxlength="250"></textarea></div>
+		</div>
+		<div class="clear"></div>
+		<div class="hello" style="display:none;">填错了</div>
+		<div class="four"></div>
+		<div class="bottom" id="sure">
+			<div class="bottom_1">确&nbsp;&nbsp;认</div>
+		</div>
+		
+	</body>
+	<script src="js/zengma/plugin/mgca.js"></script>
+    <script src="js/zengma/zcode_create.js"></script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script src="js/sec/md5.min.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+		<script src="js/zengma/i18n.js"></script>
+		<script src="js/zengma/conf.js"></script>
+		<script src="js/zengma/access.js" ></script>
+		<script src="js/zengma/common.js" ></script>
+		<script src="js/zengma/comm-dialog.js" ></script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png"/></div>
+			<div class="center" id="forgetText"></div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div class="register_list">
+			<div class="left" id="phoneText"></div>
+			<div class="right"><input id="username" type="text" maxlength="20" /></div>
+			<div class="clear"></div>
+			
+			<div class="left" id="checkcodeText"></div>
+			<div class="right">
+				<input style="width: 12rem;" id="checkcode" type="text" maxlength="10"/>
+				   <span style="color: #FF8000;" id="sendCode"></span>
+			</div>
+			<div class="clear"></div>
+				
+			<div class="left" id="setPasswordText"></div>
+			<div class="right"><input id="password" type="password" maxlength="20"/></div>
+			<div class="clear"></div>
+		</div>
+		<div class="hello" id="herror"></div>
+		
+		
+		
+		<div class="bottom" id="cfmbtn">
+			<div class="bottom_1" id="btnText"></div>
+		</div>
+		
+	</body>
+    <script src="js/zengma/forget.js"></script>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back()"><img src="images/top-left.png"/></div>
+			<div class="center">查询结果</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div id="result">
+			<div class="jieguo_tips" >
+				<div class="tips" @click="selectExpress()" ><img src="images/kd.svg"/>码上快递</div>
+				<template v-if="goodsInfo.goodsShelf">
+					<div class="tips" @click="goodsBuy()"><img src="images/gm.svg"/>码上购物</div>
+				</template>
+			</div>
+			<div class="jieguo">
+				<div class="line1">
+					<div class="left"> NFC序号<span>Serial number</span></div>
+					<div class="txt">{{ codeSn }}</div>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="line1">
+					<div class="left">认证次数<span>Authentication times</span></div>
+					<div class="txt">{{ checkCount }}</div>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="line2">
+					<div class="left">生产日期<span>Production date</span></div>
+					<div class="txt">{{ startTime }}</div>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="line2">
+					<div class="left">有效期<span>Validity times</span></div>
+					<div class="txt">{{ validityTime }}</div>
+					<div class="clear"></div>
+				</div>
+				<div class="line3">
+					<div class="left">第二储存区<span>Third storage area</span></div>
+					<div class="txt">
+						<div class="txt1" v-if="modifyInfo.thirdPlace">{{ modifyInfo.secondPlace }}</div>
+						<div class="txt1" v-else-if="declareInfo.thirdPlace">{{ declareInfo.secondPlace }}</div>
+						<div class="txt1" v-else>无</div>
+						<div class="txt1">
+							<div class="txt1_in">甄码锁开锁时间<span>open time</span></div>
+							<div class="txt1_in" v-if="modifyInfo.thirdOpLockTime">{{ modifyInfo.secondOpLockTime }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.thirdOpLockTime">{{ declareInfo.secondOpLockTime }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+						<div class="txt1">
+							<div class="txt1_in">开锁操作人<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.thirdOpLockName">{{ modifyInfo.secondOpLockName }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.thirdOpLockName">{{ declareInfo.secondOpLockName }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+						<div class="txt1">
+							<div class="txt1_in">甄码锁关锁时间<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.thirdClLockTime">{{ modifyInfo.secondClLockTime }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.thirdClLockTime">{{ declareInfo.secondClLockTime }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						<div class="txt1">
+							<div class="txt1_in">关锁操作人<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.thirdClLockName">{{ modifyInfo.secondClLockName }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.thirdClLockName">{{ declareInfo.secondClLockName }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="line3">
+					<div class="left">第三储存区<span>Third storage area</span></div>
+					<div class="txt">
+						<div class="txt1" v-if="modifyInfo.thirdPlace">{{ modifyInfo.thirdPlace }}</div>
+						<div class="txt1" v-else-if="declareInfo.thirdPlace">{{ declareInfo.thirdPlace }}</div>
+						<div class="txt1" v-else>无</div>
+						<div class="txt1">
+							<div class="txt1_in">甄码锁开锁时间<span>open time</span></div>
+							<div class="txt1_in" v-if="modifyInfo.thirdOpLockTime">{{ modifyInfo.thirdOpLockTime }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.thirdOpLockTime">{{ declareInfo.thirdOpLockTime }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+						<div class="txt1">
+							<div class="txt1_in">开锁操作人<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.thirdOpLockName">{{ modifyInfo.thirdOpLockName }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.thirdOpLockName">{{ declareInfo.thirdOpLockName }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+						<div class="txt1">
+							<div class="txt1_in">甄码锁关锁时间<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.thirdClLockTime">{{ modifyInfo.thirdClLockTime }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.thirdClLockTime">{{ declareInfo.thirdClLockTime }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						<div class="txt1">
+							<div class="txt1_in">关锁操作人<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.thirdClLockName">{{ modifyInfo.thirdClLockName }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.thirdClLockName">{{ declareInfo.thirdClLockName }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="line3">
+					<div class="left">第四储存区<span>Fourth storage area</span></div>
+					<div class="txt">
+						<div class="txt1" v-if="modifyInfo.fourthPlace">{{ modifyInfo.fourthPlace }}</div>
+						<div class="txt1" v-else-if="declareInfo.fourthPlace">{{ declareInfo.fourthPlace }}</div>
+						<div class="txt1" v-else>无</div>
+						<div class="txt1">
+							<div class="txt1_in">甄码锁开锁时间<span>open time</span></div>
+							<div class="txt1_in" v-if="modifyInfo.fourthOpLockTime">{{ modifyInfo.fourthOpLockTime }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.fourthOpLockTime">{{ declareInfo.fourthOpLockTime }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+						<div class="txt1">
+							<div class="txt1_in">开锁操作人<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.fourthOpLockName">{{ modifyInfo.fourthOpLockName }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.fourthOpLockName">{{ declareInfo.fourthOpLockName }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+						<div class="txt1">
+							<div class="txt1_in">甄码锁关锁时间<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.fourthClLockTime">{{ modifyInfo.fourthClLockTime }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.fourthClLockTime">{{ declareInfo.fourthClLockTime }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						<div class="txt1">
+							<div class="txt1_in">关锁操作人<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.fourthClLockName">{{ modifyInfo.fourthClLockName }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.fourthClLockName">{{ declareInfo.fourthClLockName }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="line3">
+					<div class="left">第五储存区<span>Fifth storage area</span></div>
+					<div class="txt">
+						<div class="txt1" v-if="modifyInfo.fifthPlace">{{ modifyInfo.fifthPlace }}</div>
+						<div class="txt1" v-else-if="declareInfo.fifthPlace">{{ declareInfo.fifthPlace }}</div>
+						<div class="txt1" v-else>无</div>
+						<div class="txt1">
+							<div class="txt1_in">甄码锁开锁时间<span>open time</span></div>
+							<div class="txt1_in" v-if="modifyInfo.fifthOpLockTime">{{ modifyInfo.fifthOpLockTime }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.fifthOpLockTime">{{ declareInfo.fifthOpLockTime }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+						<div class="txt1">
+							<div class="txt1_in">开锁操作人<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.fifthOpLockName">{{ modifyInfo.fifthOpLockName }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.fifthOpLockName">{{ declareInfo.fifthOpLockName }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+						<div class="txt1">
+							<div class="txt1_in">甄码锁关锁时间<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.fifthClLockTime">{{ modifyInfo.fifthClLockTime }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.fifthClLockTime">{{ declareInfo.fifthClLockTime }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						<div class="txt1">
+							<div class="txt1_in">关锁操作人<span>Operator</span></div>
+							<div class="txt1_in" v-if="modifyInfo.fifthClLockName">{{ modifyInfo.fifthClLockName }}</div>
+							<div class="txt1_in" v-else-if="declareInfo.fifthClLockName">{{ declareInfo.fifthClLockName }}</div>
+							<div class="txt1_in" v-else>无</div>
+							<div class="clear"></div>
+						</div>
+						
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="kuaidi" v-for="(ship, idx) in ships">
+				<div class="content">
+					运单号：{{ ship.shipNumber }} <span>{{ ship.statusText }}</span><br/>
+					承运人：{{ ship.expressCompany }}&nbsp;&nbsp;&nbsp;联系方式：{{ ship.expressPhone }}<br/>
+					始发地：{{ ship.senderCity }}&nbsp;&nbsp;&nbsp;到达地：{{ ship.receiveerCity }}
+				</div>
+
+				<div v-for="(log,index) in ship.shiplogs" :class="['list',{now:index==0},{first:index==(ship.shiplogs.length-1)}]">
+					<div class="left">{{ log.stage }}</div>
+					<div class="right">
+						<span>{{ log.ctime }}</span> {{ log.detail }}
+						<div class="tips"></div>
+					</div>
+				</div>
+				<template v-if="(idx + 1) != ships.length">
+					<div class="clear"></div>
+					<div class="fengexian" style="margin-bottom: 1rem;"></div>
+				</template>
+			</div>
+			
+			<div class="meiyou" v-if="ships.length == 0">
+				<img src="images/none.svg"/>
+				暂未有快递记录
+			</div>
+			<div class="four"></div>
+		</div>
+	</body>
+	<script src="js/zengma/query_result.js"></script>
+</html>

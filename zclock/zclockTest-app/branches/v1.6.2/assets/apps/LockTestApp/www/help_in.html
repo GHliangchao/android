@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="js/letpro/conf.js" ></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+
+		<script type="text/javascript">
+			var html = document.getElementsByTagName('html')[0],
+				width = document.documentElement.clientWidth;
+			html.style.fontSize = width / 25 + 'px';
+		</script>
+		
+		<script type="text/javascript">
+			function setStatusbarRed() {
+				// 设置系统状态栏背景色为红色
+				plus.navigator.setStatusBarBackground("#00A2FF");
+				plus.navigator.setStatusBarStyle("UIStatusBarStyleBlackOpaque");
+				
+			}
+			mui.plusReady(function(){
+				setStatusbarRed();
+			});
+		</script>
+	</head>
+
+	<body>
+		<header class="title_all">
+			<div class="title_left" onclick="mui.back();"><img src=" images/icon_back.png" /></div>
+			<div class="title_center">使用帮助</div>
+			<div class="title_right" ></div>
+			
+		</header>
+	
+		<div class="three"></div>
+
+		
+		<div class="help_in" id="helpIn">
+			<!--<div class="title">
+			标题标题标题标题标题标题标题标题标题标题标题
+			</div>
+			<div class="content">
+			<img src="images/pic.jpg"/>
+		    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		    内容内容内容内容内容内容内容内容内容内容内容内容
+		     内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		    内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+			</div>-->
+			
+		</div>
+		
+		
+	</body>
+	<script type="text/javascript" src="js/letpro/help_in.js" ></script>
+	<script type="text/javascript" src="js/letpro/check_login.js" ></script>
+</html>

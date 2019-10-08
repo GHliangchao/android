@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+		<script src="js/zengma/i18n.js"></script>
+		<script src="js/zengma/conf.js"></script>
+		<script src="js/zengma/access.js" ></script>
+		<script src="js/zengma/common.js" ></script>
+		<script src="js/zengma/comm-dialog.js" ></script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png"/></div>
+			<div class="center" id="titleText"></div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div class="register_list">
+			<div class="left" id="regroleText"></div>
+			<div class="right">
+				<select id="regrole">
+				    <!-- <option value='0' style="display: none;">请选择身份</option>
+				    <option value='P'>个人</option>
+				    <option value='B'>企业</option> -->
+				</select>
+			</div>
+			<div class="clear"></div>
+			
+			<div class="left" id="phoneText"></div>
+			<div class="right"><input id="phone" type="text" maxlength="20"/></div>
+			<div class="clear"></div>
+			
+			<div class="left" id="imgcheckcodeText"></div>
+			<div class="right">
+				<input style="height:2.2rem; background:none;width:12rem;padding:0px;margin:0px;border:0px;float:left;" type="text" name="imgcode" id="imgcode" maxlength="4"/>
+				<img id="checkImg" style="width:4.5rem;height:2rem; float:left;margin-top:0.1rem "/>
+			</div>
+			
+			<div class="left" id="checkcodeText"></div>
+			<div class="right">
+				<input style="width: 12rem;" id="checkcode" type="text" maxlength="6"/>
+			    <span style="color: #FF8000;" id="sendCode"></span>
+			</div>
+			
+			<div class="clear"></div>
+			
+			<div class="left" id="passwordText"></div>
+			<div class="right"><input id="password" type="password" maxlength="20"/> </div>
+			<div class="clear"></div>
+			
+			<div class="left" id="repeatPassText"></div>
+            <div class="right"><input id="cfmPassword" type="password" maxlength="20"/> </div>
+            <div class="clear"></div>
+			
+			<div id="checkpoint" onclick="checkagree()" class="checkbox_choose"></div>
+			<div class="checkbox_txt"><span id="checkBoxText"></span><a href="javascript:void(0);" id="openProtocol"><span id="protocolText"></span></a></div>
+			<div class="clear"></div>
+		</div>
+		<div class="hello" id="herror"></div>
+		
+		<div class="bottom" id="regbtn">
+			<div class="bottom_1" id="nextText"></div>
+		</div>
+	</body>
+<script src="js/zengma/register.js"></script>
+</html>

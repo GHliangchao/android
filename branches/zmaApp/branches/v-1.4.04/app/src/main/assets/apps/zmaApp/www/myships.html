@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png" /></div>
+			<div class="center">我的快递</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		<div id="content">
+			<div v-for="ship in ships" class="goods_list">
+				<img src="images/a2.png"/>
+				<div class="txt">
+					<b>{{ship.expressCompany}}</b>
+					<span>运单号:{{ship.shipNumber}}</span>
+					<div class="money">{{ship.senderCity}}&nbsp;→&nbsp;{{ship.receiveerCity}}</div>
+					<div class="clear"></div>
+					<div class="btn" @click="view(ship.id)">查看快递信息</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<template v-if="showNext">
+				<div  class="moremore" v-show="canclick" @click="gonext()">查看下20条</div>
+				<div  class="moremore" v-show="!canclick" >查看下20条</div>
+			</template>
+
+			<div class="meiyou" v-if="ships.length == 0">
+				<img src="images/none.svg"/>
+				暂时没有快递记录
+			</div>
+		</div>
+	
+		<div class="four"></div>
+		
+	</body>
+	<script src="js/zengma/myships.js"></script>
+</html>

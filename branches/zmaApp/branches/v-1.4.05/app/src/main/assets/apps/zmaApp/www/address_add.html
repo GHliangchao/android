@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/mui.picker.css" rel="stylesheet" />
+		<link href="css/mui.poppicker.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+	</head>
+
+	<body>
+		<div class="apptop" id="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png" /></div>
+			<div class="center" v-if="opAddr=='A'">新增地址</div>
+			<div class="center" v-else>编辑地址</div>
+			<div class="right" @click="confirmDropAddress()"><a href="javascript:void(0)" v-if="opAddr=='U'">删除</a></div>
+		</div>
+		<div class="three"></div>
+
+		<div id="content">
+			<div class="action_line">
+				<div class="txt">联系人</div>
+				<div class="text"><input type="text" placeholder="请输入联系人名字" maxlength="50" v-model="contactName"/></div>
+			</div>
+			<div class="action_line">
+				<div class="txt">联系电话</div>
+				<div class="text"><input type="text" placeholder="请输入联系人电话" maxlength="50" v-model="contactPhone"/></div>
+			</div>
+			
+			<div class="action_line">
+				<div class="txt">收件区域</div>
+				<div class="text"><input id='showCityPicker' type="text" placeholder="请选择区域" readonly="readonly"/></div>
+			</div>
+			
+			<div class="action_line">
+				<div class="txt">详细地址</div>
+				<div class="text"><input type="text" placeholder="请输入详细地址" v-model="detailAddress"/></div>
+			</div>
+			<div class="action_line">
+				<div class="txt">默认地址</div>
+				<div class="text">
+					<select v-model="defaultAddress">
+						<option value="false">非默认地址</option>
+						<option value="true">默认地址</option>
+					</select>
+				</div>
+			</div>
+			<div class="four"></div>
+	
+			<div class="bottom">
+				<div class="bottom_1" v-if="opAddr=='A'" @click="saveAddress()">保存地址</div>
+				<div class="bottom_1" v-else @click="editAddress()">编辑地址</div>
+			</div>
+		</div>
+	</body>
+	
+	<script src="js/mui.picker.js"></script>
+	<script src="js/mui.poppicker.js"></script>
+	<script src="js/zengma/address_add.js"></script>
+</html>

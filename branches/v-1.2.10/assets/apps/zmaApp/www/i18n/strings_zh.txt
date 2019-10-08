@@ -1,0 +1,341 @@
+# tan info
+tan_ok     = 确&nbsp;&nbsp;定
+tan_cancel = 取&nbsp;&nbsp;消
+
+#choose login
+login_choseLoginText = 选择登录
+login_applyText      = 申请M+G
+login_loginText      = 已是M+G会员
+login_backText       = 返&nbsp;&nbsp;&nbsp;&nbsp;回
+
+#login
+login_TitleText = M+G登录
+login_loginBtn  = 登&nbsp;&nbsp;&nbsp;&nbsp;录
+login_forget    = 忘记密码
+login_register  = 用户注册
+login_placeholder_username = 请输入您的账号
+login_placeholder_password = 请输入您密码
+login_placeholder_imgcode  = 请输入验证码
+
+#login tan
+login_tan_username = 请输入用户名~
+login_tan_password = 请输入密码~
+login_tan_phone    = 请输入正确的手机号~
+login_tan_imgcode  = 请输入验证码
+login_tan_imgcodeEr= 验证码错误
+login_wait_info    = 正在登录~
+
+#forget 
+forget_titleText = 忘记密码
+forget_phoneText = 手机号
+forget_btnText   = 确定
+forget_checkcodeText  = 验证码
+forget_sendCodeText   = 获取验证码
+forget_setPasswordText= 设置密码
+forget_placeholder_username = 请输入您的手机号
+forget_placeholder_checkcode= 请输入您的验证码
+forget_placeholder_password = 请输入密码
+
+#forget tan
+forget_tan_phone       = 请输入手机号码
+forget_tan_checkcode   = 请输入验证码
+forget_tan_newPassword = 请输入新密码
+forget_tan_passwordEr  = 请输入正确的密码(6~20位密码，只能有数字、字母等)
+forget_tan_phoneEr     = 请输入正确的手机号码
+forget_tan_error       = 出错啦~
+forget_tan_updateSucc  = 修改密码成功
+forget_tan_waitCodes   = 等待&nbsp;
+forget_tan_sendError   = 发送失败!
+forget_tan_resetSend   = 重新发送
+forget_wait_info       = 正在重设密码~
+
+#register
+register_titleText   = M+G注册
+register_regroleText = 用户身份
+register_selRole = 请选择身份
+register_roleP   = 个人
+register_roleB   = 企业
+register_sendCode= 获取验证码
+register_nextText= 下一步
+register_phoneText     = 手机号
+register_checkcodeText = 验证码
+register_passwordText  = 密&nbsp;&nbsp;码
+register_repeatPassText= 重复密码
+register_checkBoxText  = 我已阅读并遵守
+register_protocolText  = 《推点甄码平台使用协议》
+register_placeholder_phone      = 请输入您的手机号
+register_placeholder_checkcode  = 请输入您的验证码
+register_placeholder_password   = 请输入密码
+register_placeholder_repeatPass = 请与上面的密码保持一致
+
+#register js
+register_js_agreeProtocol = 请同意使用协议
+register_js_chooseRegrole = 请选择身份
+register_js_phone         = 请输入手机号码
+register_js_phoneEr       = 请输入正确的手机号码
+register_js_password      = 请输入密码
+register_js_passwordEr    = 请输入正确的密码(6~20位密码，只能有数字、字母等)
+register_js_repeatPassEr  = 请输入正确的重复密码(6~20位密码，只能有数字、字母等)
+register_js_atypismpass   = 两次密码不一致
+register_js_checkcodeEr   = 请输入手机验证码
+register_js_waitCodes     = 等待(
+register_js_sendError     = 发送失败!
+register_js_resetSend     = 重新发送
+
+#protocol
+protocol_titleText = 推点甄码平台使用协议
+protocol_btnOk     = 确&nbsp;&nbsp;认
+protocol_js_errorJs= 出错了
+
+#perfect 
+perfect_titleText  = 平台注册
+perfect_cameraText = 使用摄像头
+perfect_galleryText= 使用本机照片
+perfect_cancelText = 取消
+perfect_applyText  = 申&nbsp;&nbsp;请
+
+#perfect js
+perfect_js_waitSubmit     = 正在提交
+perfect_js_choosePlatform = 申请CA时请选择应用平台
+perfect_js_cname  = 请输入企业名称
+perfect_js_buzno  = 请输入统一社会信用代码
+perfect_js_idphoto= 请上传营业执照照片
+perfect_js_caname = 请输入法人姓名
+perfect_js_cainum = 请输入法人身份证
+perfect_js_contact= 请输入联系方式
+perfect_js_name   = 请输入注册人姓名
+perfect_js_idnumber = 请输入注册人身份证号码
+perfect_js_idmphoto = 请上传身份证照片
+perfect_js_region   = 请选择所在地区
+perfect_js_address  = 请输入所在地址
+perfect_js_waitupload = 正在上传图片~
+perfect_js_uploadSucc = 图片上传成功
+perfect_js_uploadEr   = 图片上传失败
+
+#register last
+register_last_submitText = 提交资料
+register_last_checkText  = 审核中
+register_last_resultText = 审核结果
+register_last_text       = 资料已提交成功！<br />我们将会在7个工作日内<br />完成审核工作，请耐心等待！
+register_last_next       = 下一步
+
+#help 
+help_titleText = 帮助中心
+
+#zmlist
+zmlist_titleText    = 甄码管理
+zmlist_showWaitInfo = 正在获取平台信息~
+
+#zmdetail
+zmdetail_titleText            = 甄码管理
+zmdetail_null_message         = 生成基础码
+zmdetail_zcodeText            = 基础甄码：
+zmdetail_hideCodeText         = 收起基础码
+zmdetail_showCodeText         = 显示基础码
+zmdetail_effectDateText       = 生成时间：
+zmdetail_cnText               = 公司名称：
+zmdetail_buznoText            = 统一信用代码：
+zmdetail_caIdText             = 证书ID：
+zmdetail_calidityDateText     = 有效期：
+zmdetail_certAuthorityText    = 颁发机构：
+zmdetail_caStatusText         = 证书状态：
+zmdetail_renewText            = 续期
+zmdetail_fingerprintText      = 证书指纹：
+zmdetail_qrcodeText           = 二维码：
+zmdetail_searchText           = 搜索
+zmdetail_placeholder_name     = 输入用户名
+zmdetail_placeholder_startTime= 开始日期
+zmdetail_placeholder_endTime  = 结束日期
+zmdetail_showWait_platformInfo= 正在获取平台信息
+zmdetail_showWait_cBaseZcode  = 正在生成基础甄码~
+zmdetail_showWait_connectUkey = 正在连接Ukey~
+zmdetail_showWait_verifysign  = 正在验证签名~
+zmdetail_showWait_waiting     = 等待中...
+zmdetail_pullRefresh_loading  = 正在加载...
+zmdetail_pullRefresh_noContent= 没有更多数据了
+zmdetail_content_startTimeEr  = 开始日期输入格式不正确，请按yyyy-MM-dd的格式输入！
+zmdetail_content_endTimeEr    = 结束日期输入格式不正确，请按yyyy-MM-dd的格式输入！
+zmdetail_zmcode_createTime    = 签名时间：
+zmdetail_zmcode_name          = 签名用户姓名：
+zmdetail_zmcode_title         = 签名标题：
+zmdetail_zmcode_zmCode        = 甄码编码：
+
+# zmchain
+zmchain_titleText = 甄码链
+zmchain_showWait_selPlatformInfo = 正在获取平台信息
+
+#---------app 第一次翻译 @since liujun 2018-02-26------------------------
+
+# calist
+calist_titleText     = CA卡管理
+calist_applyCA       = CA申请
+calist_applyCAStatus = CA申请状态
+calist_showWait_info = 正在获取CA信息
+
+# ca apply status
+caApplyStatus_titleText     = CA 申请状态
+caApplyStatus_showWait_info = 正在获取ca申请状态信息~
+
+#ca platform select
+caplatformselect_titleText  = CA申请
+caplatformselect_submitText = 提 交 申 请
+caplatformselect_showWait_readPlatformInfo = 正在获取平台应用信息
+caplatformselect_showWait_submitInfo       = 正在提交，请稍等...
+caplatformselect_dialog_content            = 请选择平台~
+
+# cartlist
+cartlist_titleText    = 一芯多卡
+cartlist_caManageText = CA卡管理
+cartlist_caInfoText   = 管理CA卡的信息以及确认设备从指定CA卡读取信息
+cartlist_ctlManageText= 银行卡管理
+cartlist_ctlInfoText  = 管理银行卡信息，以及确认设备从指定银行卡读取信息
+cartlist_appManageText= 应用卡管理
+cartlist_appInfoText  = 应用卡的集合管理
+
+# mulscrctl
+mulscrctl_titleText = 建设中
+mulscrctl_buildText = 栏目正在建设中
+
+# scan auth
+scanauth_titleText    = 扫码认证
+scanauth_zmQRcodeText = 甄码二维码扫码
+scanauth_zmQRInfoText = 扫一扫二维码，就能获得甄码信息
+scanauth_zmNFCText    = 甄码锁NFC
+scanauth_zmNFCInfoText= 通过手机NFC的方式连接NFC设备，从NFC设备获取设备信息以及交易数据
+scanauth_normalQRText = 普通扫码
+scanauth_normalQRInfoText = 扫一扫二维码，获取二维码信息
+scanauth_zmlockText       = 甄码锁
+scanauth_zmlockInfoText   = 通过甄码锁硬件，获取交易数据
+
+# scan zcode
+scanzcode_cancelText    = 取&nbsp;&nbsp;消
+scanzcode_openFlash     = 打开闪光灯
+scanzcode_closeFlash    = 关闭闪光灯
+scanzocde_js_unknown    = 未知: 
+scanzocde_js_noDevice   = 你没有可用M+G设备
+scanzocde_js_connectKey = 正在连接Ukey~
+scanzocde_js_loading    = 加载中~~
+
+# scan 
+scan_openPicture        = 打开相册
+scan_cancelText         = 取&nbsp;&nbsp;消
+scan_openFlash          = 打开闪光灯
+scan_closeFlash         = 关闭闪光灯
+scan_js_unknown         = 未知: 
+scan_js_discern         = 识别中~~
+scan_js_unrecognized    = 照片中未识别到二维码
+
+# scan result
+scanresult_titleText    = 扫码结果
+
+# member center
+center_titleText      = 个人中心
+center_headPicText    = 修改头像
+center_updateNameText = 修改昵称
+center_uPasswordText  = 修改密码
+center_umodifyInfoText= 修改资料
+center_logoutText     = 切换用户
+center_canmeraText    = 使用摄像头
+center_galleryText    = 使用本机照片
+center_cancelText     = 取消
+center_js_loading     = 正在加载中~
+center_js_defaultName = 默认昵称
+center_js_logoutEr    = 退出登陆失败
+center_js_enterName   = 请输入您的昵称
+center_js_updateName  = 修改昵称
+center_js_nameIsNull  = 昵称不能为空
+center_js_submitting  = 正在提交中~~
+center_js_updateSucc  = 修改成功
+center_js_handlePic   = 正在处理图片~
+center_js_uploadPro   = 正在上传头像~
+center_js_uploadProSucc=头像上传成功
+center_js_error       = 出错啦~
+center_js_promptOk    = 确定
+center_js_onCertified = 未认证
+
+#reset password
+resetPassword_title      = 修改密码
+resetPassword_oldPwdText = 旧密码：
+resetPassword_newPwdText = 新密码：
+resetPassword_cfmPwdText = 确认密码：
+resetPassword_cfmbtnText = 确认修改
+resetPassword_oldPassword= 请输入旧密码
+resetPassword_newPassword= 请输入新密码
+resetPassword_cfmPassword= 请输入确认密码
+resetPassword_js_oldPwdEr= 旧密码格式不正确(6~20位密码，只能有数字、字母等)
+resetPassword_js_newPwdEr= 新密码格式不正确(6~20位密码，只能有数字、字母等)
+resetPassword_js_cfmPwdEr= 重复密码格式不正确(6~20位密码，只能有数字、字母等)
+resetPassword_js_onEqual = 两次密码输入不一致
+resetPassword_js_updatePwd     = 正在修改密码~
+resetPassword_js_updatePwdSucc = 修改密码成功
+
+#member info
+membInfo_title   = 用户信息
+membInfo_camera  = 使用摄像头
+membInfo_gallery = 使用本机照片
+membInfo_cancel  = 取消
+membInfo_cmfBtn  = 确认修改
+membInfo_showWait_loading = 正在加载中~~
+membInfo_showWait_submit  = 正在提交中...
+membInfo_showWait_upload  = 正在上传图片~
+membInfo_js_cname         = 请输入企业名称
+membInfo_js_buzno         = 请输入统一社会信用代码
+membInfo_js_idbphoto      = 请上传营业执照照片
+membInfo_js_canme         = 请输入法人姓名
+membInfo_js_cainum        = 请输入法人身份证
+membInfo_js_contact       = 请输入联系方式
+membInfo_js_name          = 请输入注册人姓名
+membInfo_js_idnumber      = 请输入注册人身份证号码
+membInfo_js_idmphoto      = 请上传身份证照片
+membInfo_js_region        = 请选择所在地区
+membInfo_js_address       = 请输入所在地址
+membInfo_js_uploadSucc    = 图片上传成功
+membInfo_js_uploadError   = 图片上传失败
+
+#access js
+access_js_error          = 出错啦~
+assess_js_connectNetwork = 请连接网络
+
+#common js
+common_js_parameterEr    = 参数错误
+common_js_openBluetooth  = 正在开启蓝牙中~~
+common_js_openBleError   = 蓝牙开启失败，请到手机设置中开启
+
+#comm-dialog js
+comm_dialog_titleText    = 提示
+
+#exit-handler js
+exit_handler_toastInfo   = 连续点击两下退出
+
+# conf js
+conf_js_networkEr        = 无法连接网络
+conf_js_needUpdate       = 检测到新版本，请更新
+conf_js_startDownload    = 开始下载...
+conf_js_downloadError    = 下载更新资源失败！
+conf_js_downloaded       = 已下载
+conf_js_install          = 在线升级，安装资源文件...
+conf_js_installSucc      = 应用资源更新完成！
+conf_js_installEr        = 在线升级，安装资源文件失败
+
+#---------------第二次翻译 @since liujun 2018-02-28 --------------------------
+
+#zmdetail
+zmdetail_pullRefresh_contentdown = 上拉显示更多
+
+#scan zcode
+scanzcode_operating = 操作
+scanzcode_readyInfo = 读取甄码信息
+
+#---------------未翻译过 @since 2018-11-16 liujun --------------------------------------
+
+#---------------推点码 @since 2018-11-15 pzp --------------------------------
+goods_code_js_titleText   = 推点商品码
+goods_code_js_QRcodeText  = 商品二维码
+goods_code_js_QRInfoText  = 扫一扫二维码，就能获得商品信息、商品进出口信息和甄码数据
+goods_code_js_NFCText     = 商品码NFC
+goods_code_js_NFCInfoText = 通过手机NFC的方式连接NFC设备，从NFC设备获取商品信息、商品进出口信息和甄码数据
+goods_code_js_NFCInfoError= 请扫描推点商品码
+
+#---------------推点码详情 @since 2018-11-16 liujun --------------------------------
+goods_code_detail_titleText = 推点码详情
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+				<script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back()"><img src="images/top-left.png" /></div>
+			<div class="center">发快递</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		<div id="content">
+			<div class="address_list" @click="selectAddress('M')" v-if="haveMailAddress">
+				<div class="icon">
+					<div class="orange">寄</div>
+				</div>
+				<div class="txt">
+					<b>{{mailaddress.contactName}}</b>&nbsp;&nbsp;{{mailaddress.contactPhone}}<br />
+						{{mailaddress.addressInfo}}
+				</div>
+				<div class="go"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="address_list" @click="selectAddress('M')" v-else>
+				<div class="icon">
+					<div class="orange">寄</div>
+				</div>
+				<div class="txt">
+					请选择寄件地址
+				</div>
+				<div class="go"></div>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="address_list" @click="selectAddress('R')" v-if="haveReceAddress">
+				<div class="icon">
+					<div class="blue">收</div>
+				</div>
+				<div class="txt">
+					<b>{{receaddress.contactName}}</b>&nbsp;&nbsp;{{receaddress.contactPhone}}<br />
+						{{receaddress.addressInfo}}
+				</div>
+				<div class="go"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="address_list" @click="selectAddress('R')" v-else>
+				<div class="icon">
+					<div class="blue">收</div>
+				</div>
+				<div class="txt">
+					<b>请选择收件地址
+				</div>
+				<div class="go"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="fengexian"></div>
+			
+			<div class="action_line">
+				<div class="txt">货物类型</div>
+				<div class="text">
+					<select v-model="gtype">
+						<option value="0">请选择货物类型</option>
+						<option v-for="gt in gtypes" :value="gt">{{gt}}</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="action_line">
+				<div class="txt">备注</div>
+				<div class="text"><input type="text" v-model="remark" placeholder="请输入备注内容"/></div>
+			</div>
+	
+	
+			<div class="four"></div>
+	
+			<div class="bottom_buy">
+			<div class="bottom_1" @click="submitOrder">确认快递</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/zengma/ship_other.js"></script>
+
+</html>

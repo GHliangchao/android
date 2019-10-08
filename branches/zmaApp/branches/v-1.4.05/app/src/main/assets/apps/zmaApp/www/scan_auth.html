@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title></title>
+        <script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png"/></div>
+			<div class="center" id="scanAuthText"></div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div class="saoma_list" id="scanZcode">
+			<img src="images/s1.jpg">
+			<strong id="zmQRcodeText"></strong><br />
+			<span id="zmQRInfoText"></span>
+			<div class="clear"></div>
+		</div>
+		
+		<!-- <div class="saoma_list" onclick="document.location='NFC读卡3-1-2-2.html'"> -->
+		<div class="saoma_list" id="lockNFC">
+			<img src="images/s3.jpg">
+			<strong id="zmNFCText"></strong><br />
+			<span id="zmNFCInfoText"></span>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="saoma_list" id="scan">
+			<img src="images/s2.jpg">
+			<strong id="normalQRText"></strong><br />
+			<span id="normalQRInfoText"></span>
+			<div class="clear"></div>
+		</div>
+
+        <!-- 跳到甄码锁扫描页面 -->
+		<div class="saoma_list" id="lock">
+			<img src="images/s4.jpg">
+			<strong id="zmlockText"></strong><br />
+			<span id="zmlockInfoText"></span>
+			<div class="clear"></div>
+		</div>
+		
+		<!-- 北斗多模 since 2019.08.13 liujun -->
+		<div class="saoma_list" id="beidou">
+			<img src="images/s7.jpg">
+			<strong id="beidouText"></strong><br />
+			<span id="beidouInfoText"></span>
+			<div class="clear"></div>
+		</div>
+		
+		<!-- 北斗多模 since 2019.08.13 liujun -->
+		<div class="saoma_list saoma_list_white" id="multiScreen">
+			<img src="images/s8.jpg">
+			<strong id="multiScreenText"></strong><br />
+			<span id="multiScreenInfoText"></span>
+			<div class="clear"></div>
+		</div>
+		
+		
+		<div class="four"></div>
+		<div class="bottom">
+            <div class="bottom_nav_3">
+                <div class="btn" id="gotoindex"><img src="images/index1.png"/><br />首页 HOME</div>
+                <div class="btn" id="gotolock"><img src="images/index4.png"/><br />甄码锁 LOCK</div>
+                <!--<div class="btn" id="gotoSecurity"><img src="images/index5.png"/><br />防伪</div>-->
+                <div class="btn" id="gotohelp"><img src="images/index3.png"/><br />帮助中心 HELP</div>
+                <div class="btn" id="gotocenter"><img src="images/index2.png"/><br />个人中心 MEMBER</div>
+            </div>
+        </div>
+	</body>
+	<script>
+	   i18n.readyI18n(function(){
+		   $("#scanAuthText").html($.i18n.prop("scanauth_titleText"));
+		   $("#zmQRcodeText").html($.i18n.prop("scanauth_zmQRcodeText"));
+		   $("#zmQRInfoText").html($.i18n.prop("scanauth_zmQRInfoText"));
+		   $("#zmNFCText").html($.i18n.prop("scanauth_zmNFCText"));
+		   $("#zmNFCInfoText").html($.i18n.prop("scanauth_zmNFCInfoText"));
+		   $("#normalQRText").html($.i18n.prop("scanauth_normalQRText"));
+		   $("#normalQRInfoText").html($.i18n.prop("scanauth_normalQRInfoText"));
+		   $("#zmlockText").html($.i18n.prop("scanauth_zmlockText"));
+		   $("#zmlockInfoText").html($.i18n.prop("scanauth_zmlockInfoText"));
+		   $("#beidouText").html($.i18n.prop("scan_auth_beidouText"));
+		   $("#beidouInfoText").html($.i18n.prop("scan_auth_beidouInfoText"));
+		   $("#multiScreenText").html($.i18n.prop("scan_auth_multiScreenText"));
+		   $("#multiScreenInfoText").html($.i18n.prop("scan_auth_multiScreenInfoText"));
+	   });
+	</script>
+    <script src="js/zengma/scan_auth.js"></script>
+    <script src="js/zengma/common.js"></script>
+</html>

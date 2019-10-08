@@ -1,0 +1,90 @@
+<properties>
+    <features>
+        <feature
+            name="Cache"
+            value="io.dcloud.feature.pdr.CoreCacheFeatureImpl" >
+        </feature>
+
+        <feature
+            name="Console"
+            value="io.dcloud.feature.pdr.LoggerFeatureImpl" >
+        </feature>
+        
+        <feature
+            name="Device"
+            value="io.dcloud.feature.device.DeviceFeatureImpl" >
+        </feature>
+
+        <feature
+            name="File"
+            value="io.dcloud.js.file.FileFeatureImpl" >
+        </feature>
+
+        <feature
+            name="Invocation"
+            value="io.dcloud.invocation.Invocation" >
+        </feature>
+        
+        <feature
+            name="Orientation"
+            value="io.dcloud.feature.sensor.OrientationFeatureImpl" />
+
+        <feature
+            name="Storage"
+            value="io.dcloud.feature.pdr.NStorageFeatureImpl" >
+        </feature>
+
+        <feature
+            name="Navigator"
+            value="io.dcloud.feature.ui.navigator.NavigatorUIFeatureImpl" >
+        </feature>
+
+        <feature
+            name="NativeObj"
+            value="io.dcloud.feature.nativeObj.FeatureImpl" />
+
+        <feature
+            name="NativeUI"
+            value="io.dcloud.feature.ui.nativeui.NativeUIFeatureImpl" >
+        </feature>
+
+        <feature
+            name="UI"
+            value="io.dcloud.feature.ui.UIFeatureImpl" >
+
+            <module
+                name="Navigator"
+                value="io.dcloud.feature.ui.NavView" />
+        </feature>
+
+        <feature
+            name="Runtime"
+            value="io.dcloud.feature.pdr.RuntimeFeatureImpl" >
+        </feature>
+
+        <feature
+            name="XMLHttpRequest"
+            value="io.dcloud.net.XMLHttpRequestFeature" >
+        </feature>
+
+        <feature
+            name="Zip"
+            value="io.dcloud.feature.pdr.ZipFeature" >
+        </feature>
+        
+        <feature
+            name="nfcodeFile"
+            value="com.tuidian.tech.nfctool.NfcodeFileFeatureImpl" >
+        </feature>
+        
+    </features>
+
+    <services>
+        <!-- 如果扩展插件需要在应用启动时初始化可以在这里添加一个service -->
+        <service 
+            name="nfcodeFileService" 
+            value="com.tuidian.tech.nfctool.NfcodeFileFeatureImpl" />
+        
+	</services>
+
+</properties>

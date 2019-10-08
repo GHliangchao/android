@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tuidian.tech.zma.lock"
+    android:versionCode="10604"
+    android:versionName="1.6.4" >
+
+    <uses-sdk
+        android:minSdkVersion="18" />
+
+</manifest>

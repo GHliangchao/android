@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png" /></div>
+			<div class="center">购买下单</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		<div id="content">
+			<div class="address_list" @click="selectAddress()" v-if="haveAddress">
+				<div class="icon"></div>
+				<div class="txt">
+					<b>{{address.contactName}}</b>&nbsp;&nbsp;{{address.contactPhone}}<br />
+					{{address.addressInfo}}
+				</div>
+				<div class="go"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="address_list" @click="selectAddress()" v-else>
+				<div class="icon"></div>
+				<div class="txt">
+					<b>请选择地址</b>
+				</div>
+				<div class="go"></div>
+				<div class="clear"></div>
+			</div>
+			<!--<div class="action_line">
+				<div class="txt">快递选择</div>
+				<select>
+					<option>请选择快递</option>
+					<option>顺丰</option>
+					<option>申通</option>
+				</select>
+			</div>-->
+			<div class="goods_list">
+				<img :src="goodsInfo.sellGoodsImage"/>
+				<div class="txt">
+					<b>{{goodsInfo.goodsTitle}}</b>
+					<span>{{goodsInfo.goodsSpec}}</span>
+					<div class="clear"></div>
+					<div class="money">¥<strong>{{goodsInfo.price}}</strong></div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="action_line">
+				<div class="txt">购买数量</div>
+				<div class="num">
+					<div class="btn" @click="subtract()">-</div>
+					<input type="text" readonly="readonly" v-model="goodsCount" />
+					<div class="btn" @click="add()">+</div>
+				</div>
+			</div>
+	
+			<div class="four"></div>
+	
+			<div class="bottom_buy">
+				<div class="txt">共<span>{{goodsCount}}</span>件&nbsp;&nbsp;小计<span>¥{{goodsPrice}}</span></div>
+				<div class="btn" @click="submitOrder();">确认提交</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/calculate.js"></script>
+	<script src="js/zengma/goods_buy.js"></script>
+</html>

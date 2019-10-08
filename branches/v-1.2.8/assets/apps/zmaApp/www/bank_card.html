@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<script type="text/javascript">
+			var html = document.getElementsByTagName('html')[0],
+				width = document.documentElement.clientWidth;
+			html.style.fontSize = width / 25 + 'px';
+		</script>
+		<script type="text/javascript">
+			function setStatusbarRed() {
+				// 设置系统状态栏背景色为红色
+				plus.navigator.setStatusBarBackground("#000000");
+				plus.navigator.setStatusBarStyle("UIStatusBarStyleBlackOpaque");
+
+			}
+			mui.plusReady(function() {
+				setStatusbarRed();
+			});
+		</script>
+		
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="javascript:history.back(-1);"><img src="images/top-left.png"/></div>
+			<div class="center">银行卡管理</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div class="zcode_in">
+			<div class="left">卡号：</div>
+			<div class="right">1231231412312313</div>	
+			
+			<div class="left">开户行：</div>
+			<div class="right">中国农业银行</div>	
+            <div class="clear"></div>
+		</div>
+		
+		<div class="zcode_in">
+			<div class="left">卡号：</div>
+			<div class="right">1231415345111023</div>	
+			
+			<div class="left">开户行：</div>
+			<div class="right">中国建设银行</div>	
+            <div class="clear"></div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+
+</html>

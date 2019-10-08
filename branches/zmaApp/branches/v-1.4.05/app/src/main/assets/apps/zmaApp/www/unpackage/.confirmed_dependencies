@@ -1,0 +1,222 @@
+{
+  "index.html": {
+    "refer": [
+      "goods_code.html",
+      "lock.html",
+      "member_center.html",
+      "scan_auth.html",
+      "login_choose.html",
+      "zmlist.html",
+      "calist.html",
+      "cartlist.html",
+      "mulscr_ctl.html",
+      "help.html",
+      "app_list.html",
+      "goods_list.html",
+      "online_express.html",
+      "cross_border.html"
+    ]
+  },
+  "member_center.html": {
+    "refer": [
+      "index.html",
+      "help.html",
+      "scan_security.html",
+      "lock.html",
+      "login.html",
+      "reset.html",
+      "memb_info.html",
+      "address_list.html",
+      "order_list.html",
+      "myships.html"
+    ]
+  },
+  "goods_code.html": {
+    "refer": [
+      "member_center.html",
+      "help.html",
+      "goods_code_scan.html",
+      "index.html"
+    ]
+  },
+  "scan_security.html": {
+    "refer": [
+      "help.html",
+      "index.html",
+      "lock.html",
+      "scan_nfc_write.html",
+      "scan_nfc_read.html"
+    ]
+  },
+  "help.html": {
+    "refer": [
+      "scan_security.html",
+      "member_center.html",
+      "lock.html",
+      "index.html"
+    ]
+  },
+  "scan_auth.html": {
+    "refer": [
+      "scan_zcode.html",
+      "lock.html",
+      "scan.html",
+      "index.html",
+      "member_center.html",
+      "scan_security.html",
+      "mulscr_ctl.html",
+      "help.html"
+    ]
+  },
+  "scan.html": {
+    "refer": [
+      "scan_result.html"
+    ]
+  },
+  "login_choose.html": {
+    "refer": [
+      "login.html",
+      "register.html"
+    ]
+  },
+  "login.html": {
+    "refer": [
+      "register.html",
+      "forget.html",
+      "index.html"
+    ]
+  },
+  "register.html": {
+    "refer": [
+      "protocol.html",
+      "perfect.html"
+    ]
+  },
+  "perfect.html": {
+    "refer": [
+      "register_last.html"
+    ]
+  },
+  "zmlist.html": {
+    "refer": [
+      "zmdetail.html",
+      "ca_apply_status.html",
+      "member_center.html",
+      "help.html"
+    ]
+  },
+  "zmdetail.html": {
+    "refer": [
+      "zmchain.html",
+      "split_code_list.html"
+    ]
+  },
+  "calist.html": {
+    "refer": [
+      "ca_apply_status.html",
+      "ca_platform_select.html"
+    ]
+  },
+  "cartlist.html": {
+    "refer": [
+      "calist.html",
+      "mulscr_ctl.html",
+      "index.html"
+    ]
+  },
+  "mulscr_ctl.html": {
+    "refer": [
+      "cartlist.html",
+      "lock.html",
+      "index.html",
+      "member_center.html"
+    ]
+  },
+  "goods_code_scan.html": {
+    "refer": [
+      "goods_scan_details.html"
+    ]
+  },
+  "ca_apply_status.html": {
+    "refer": [
+      "index.html",
+      "member_center.html"
+    ]
+  },
+  "app_list.html": {
+    "refer": [
+      "ca_platform_select.html",
+      "ca_apply_status.html",
+      "lock_write_code.html"
+    ]
+  },
+  "lock_write_code.html": {
+    "refer": [
+      "lock_create_write.html"
+    ]
+  },
+  "goods_list.html": {
+    "refer": [
+      "lock.html",
+      "help.html",
+      "index.html",
+      "goods_buy.html",
+      "member_center.html"
+    ]
+  },
+  "goods_buy.html": {
+    "refer": [
+      "order_pay.html",
+      "address_list.html"
+    ]
+  },
+  "order_pay.html": {
+    "refer": [
+      "order_list.html"
+    ]
+  },
+  "order_list.html": {
+    "refer": [
+      "express_detail.html",
+      "order_pay.html"
+    ]
+  },
+  "online_express.html": {
+    "refer": [
+      "query_result.html",
+      "choose_express.html"
+    ]
+  },
+  "query_result.html": {
+    "refer": [
+      "choose_express.html",
+      "goods_buy.html"
+    ]
+  },
+  "address_list.html": {
+    "refer": [
+      "address_add.html"
+    ]
+  },
+  "ship_other.html": {
+    "refer": [
+      "address_list.html"
+    ]
+  },
+  "choose_express.html": {
+    "refer": [
+      "ship_other.html",
+      "ship_owner.html"
+    ]
+  },
+  "myships.html": {
+    "refer": [
+      "express_detail.html"
+    ]
+  },
+  "ship_owner.html": {
+    "refer": [
+      "address_list.html"
+    ]
+  }
+}

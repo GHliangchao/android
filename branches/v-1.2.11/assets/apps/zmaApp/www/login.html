@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script src="js/sec/md5.min.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+		<script src="js/zengma/i18n.js"></script>
+		<script src="js/zengma/conf.js"></script>
+		<script src="js/zengma/access.js" ></script>
+		<script src="js/zengma/common.js" ></script>
+		<script src="js/zengma/comm-dialog.js" ></script>
+		<script src="js/zengma/exit-handler.js"></script>
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back();"><img src="images/top-left.png"/></div>
+			<div class="center" id="loginText"></div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<div class="login_pic">
+			<img src="images/logo2.png"/>
+		</div>
+		
+		<div class="login_txt" style="background: url(images/login1.png) center left no-repeat ; background-size:2.6rem ;">
+			<input type="text" name="username" id="username" maxlength="20"/>
+		</div>
+		<div class="login_txt" style="background: url(images/login2.png) center left no-repeat ; background-size:2.6rem ;">
+			<input type="password" name="password" id="password" maxlength="20"/>
+		</div>
+		<div class="login_txt" style=" float:left;background: url(images/login3.png) center left no-repeat ; background-size:2.6rem; width: 12rem;">
+			<input type="text" name="imgcode" id="imgcode" maxlength="4"/>
+		</div>
+		<div class="login_txt_pic">
+			<img id="checkImg"/>
+		</div>
+		<div class="clear"></div>
+		<div class="hello"></div><!--正常情况下此div没有文字,出问题才有文字-->
+		<div class="login_btn" id="loginBtn"></div>
+		<div class="login_action"><a href="javascript:void(0);" id="forget"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void();" id="register"></a></div>
+		
+	</body>
+    <script src="js/zengma/login.js"></script>
+</html>

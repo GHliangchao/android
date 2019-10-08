@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <link href="css/base.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+        <script src="js/zengma/conf.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/comm-dialog.js"></script>
+
+	</head>
+
+	<body>
+		<div class="apptop">
+			<div class="left" onclick="mui.back()"><img src="images/top-left.png" /></div>
+			<div class="center">选择支付</div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		<div id="content">
+			<div class="pay_all">
+				<div class="pay_content">
+					¥&nbsp;<b>{{price}}</b>
+				</div>
+				<div class="pay_list" @click="clickWeChat();">
+					<img src="images/wx.svg" />
+					<div class="txt">微信支付</div>
+					<div class="choose" :class="{choosed: selectWeChat}"></div>
+				</div>
+				<div class="pay_list" @click="clickAlipay();">
+					<img src="images/zfb.svg" />
+					<div class="txt">支付宝支付</div>
+					<div class="choose" :class="{choosed: selectAlipay}"></div>
+				</div>
+				<div class="pay_list"  @click="clickUnionPay()">
+					<img src="images/yl.svg" />
+					<div class="txt">银联支付</div>
+					<div class="choose" :class="{choosed: selectUnionPay}"></div>
+				</div>
+				<div class="pay_list" @click="clickMasterCard()">
+					<img src="images/wsd.svg" />
+					<div class="txt">MasterCard</div>
+					<div class="choose" :class="{choosed: selectMasterCard}"></div>
+				</div>
+				<div class="pay_list" @click="clickVisa()">
+					<img src="images/visa.svg" />
+					<div class="txt">Visa</div>
+					<div class="choose" :class="{choosed: selectVisa}"></div>
+				</div>
+			</div>
+			<div class="four"></div>
+	
+			<div class="bottom">
+				<div class="bottom_1" @click="confirmPay();">前往支付</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/zengma/order_pay.js"></script>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+        <script src="js/zengma/i18n.js"></script>
+		<script src="js/zengma/conf.js"></script>
+		<script src="js/zengma/access.js" ></script>
+        <script src="js/zengma/common.js" ></script>
+        <script src="js/zengma/comm-dialog.js" ></script>
+	    <script type="text/javascript">
+	        zengma_conf.uiInit();
+        </script>
+	</head>
+
+	<body>
+		<div class="apptop app_orange">
+			<div class="left">&nbsp;</div>
+			<div class="center"><span id="choseLoginText"></span></div>
+			<div class="right"></div>
+		</div>
+		<div class="three"></div>
+		
+		<!-- <div class="login_choose" onclick="mui.openWindow({url:'register.html'})">
+			<img src="images/inlogin.png"/><br /><span id="applyText"></span>
+		</div>
+		
+		<div class="login_choose" onclick="mui.openWindow({url:'login.html'})">
+			<img src="images/inlogin2.png"/><br /><span id="loginText"></span>
+		</div>-->
+		
+		<div class="lgc">
+            <div class="pic" style="margin-left:4rem;" onclick="mui.openWindow({url:'register.html'})">
+                <img src="images/logina.png" /><br/><span id="applyText"></span>
+            </div>
+            <div class="pic" onclick="mui.openWindow({url:'login.html'})">
+                <img src="images/loginb.png" /><br/><span id="loginText"></span>
+            </div>
+            <div class="clear"></div>
+            <div class="txt" id="content"></div>
+            <div class="btn" onclick="mui.back();" id="back"></div>
+            <div class="clear"></div>
+        </div>
+        <div class="four"></div>
+		
+	</body>
+	<script>
+		// i18n国际化资源 @since liujun 2018-02-23
+	    // ------------------start--------------------
+	    // 第一次加载显示的国际化资源文件
+	    i18n.readyI18n(function(){
+	    	$("#choseLoginText").html($.i18n.prop("login_choseLoginText"));
+            $("#applyText").html($.i18n.prop("login_applyText"));
+            $("#loginText").html($.i18n.prop("login_loginText"));
+            $("#back").html($.i18n.prop("login_backText"));
+	    });
+	    
+	    /* // 点击按钮后的国际化资源文件
+	    document.getElementById("changelanguage").addEventListener('tap', function() {
+	        if ('zh' == window.lang) {
+	        	window.lang = 'en';
+	        } else {
+	        	window.lang = 'zh';
+	        }
+	        jQuery.i18n.properties({
+	            name: 'strings',
+	            path: 'i18n/', //资源文件路径
+	            mode: 'map', //用Map的方式使用资源文件中的值
+	            language: window.lang,
+	            callback: function() { //加载成功后设置显示内容
+	                $("#choseLoginText").html($.i18n.prop("login_choseLoginText"));
+	               $("#applyText").html($.i18n.prop("login_applyText"));
+	               $("#loginText").html($.i18n.prop("login_loginText"));
+	               $("#changelanguage").html($.i18n.prop("changelanguage"));
+	            }
+	        });
+	    }); */
+	    // ------------------ end --------------------
+	</script>
+	<script src="js/zengma/login_choose.js" ></script>
+</html>

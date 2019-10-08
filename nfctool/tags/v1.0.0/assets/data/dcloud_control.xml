@@ -1,0 +1,5 @@
+<msc version="1.9.9.32329" debug="true">
+    <apps>
+        <app appid="nfctool" appver="1.0.0"/>
+    </apps>
+</msc>

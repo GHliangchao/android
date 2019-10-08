@@ -1,0 +1,9 @@
+<resources>
+	
+    <string name="nfc_read">Read NFC tag</string>
+    <string name="nfc_write">Write NFC tag</string>
+    <string name="nfc_ophint">Please close to the lock NFC tag</string>
+	<string name="nfc_rdhint">Read the following data from NFC tag</string>
+	<string name="nfc_wthint">Write the following data to NFC tag</string>
+	
+</resources>

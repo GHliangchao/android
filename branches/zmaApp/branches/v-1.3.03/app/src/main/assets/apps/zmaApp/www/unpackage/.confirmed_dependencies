@@ -1,0 +1,125 @@
+{
+	"index.html": {
+		"refer": [
+			"goods_code.html",
+			"lock.html",
+			"member_center.html",
+			"scan_auth.html",
+			"login_choose.html",
+			"zmlist.html",
+			"calist.html",
+			"cartlist.html",
+			"mulscr_ctl.html",
+			"help.html"
+		]
+	},
+	"member_center.html": {
+		"refer": [
+			"index.html",
+			"help.html",
+			"scan_security.html",
+			"lock.html",
+			"login.html",
+			"reset.html",
+			"memb_info.html"
+		]
+	},
+	"goods_code.html": {
+		"refer": [
+			"member_center.html",
+			"help.html",
+			"goods_code_scan.html",
+			"index.html"
+		]
+	},
+	"scan_security.html": {
+		"refer": [
+			"help.html",
+			"index.html",
+			"lock.html",
+			"scan_nfc_write.html",
+			"scan_nfc_read.html"
+		]
+	},
+	"help.html": {
+		"refer": [
+			"scan_security.html",
+			"member_center.html",
+			"lock.html",
+			"index.html"
+		]
+	},
+	"scan_auth.html": {
+		"refer": [
+			"scan_zcode.html",
+			"lock.html",
+			"scan.html",
+			"index.html",
+			"member_center.html",
+			"scan_security.html"
+		]
+	},
+	"scan.html": {
+		"refer": [
+			"scan_result.html"
+		]
+	},
+	"login_choose.html": {
+		"refer": [
+			"login.html",
+			"register.html"
+		]
+	},
+	"login.html": {
+		"refer": [
+			"register.html",
+			"forget.html",
+			"index.html"
+		]
+	},
+	"register.html": {
+		"refer": [
+			"protocol.html",
+			"perfect.html"
+		]
+	},
+	"perfect.html": {
+		"refer": [
+			"register_last.html"
+		]
+	},
+	"zmlist.html": {
+		"refer": [
+			"zmdetail.html",
+			"ca_apply_status.html",
+			"member_center.html"
+		]
+	},
+	"zmdetail.html": {
+		"refer": [
+			"zmchain.html",
+			"split_code_list.html"
+		]
+	},
+	"calist.html": {
+		"refer": [
+			"ca_apply_status.html",
+			"ca_platform_select.html"
+		]
+	},
+	"cartlist.html": {
+		"refer": [
+			"calist.html"
+		]
+	},
+	"mulscr_ctl.html": {
+		"refer": [
+			"cartlist.html"
+		]
+	},
+	"goods_code_scan.html": {
+		"refer": [
+			"goods_scan_details.html"
+		]
+	}
+}
